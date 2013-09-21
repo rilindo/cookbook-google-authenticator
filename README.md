@@ -24,6 +24,11 @@ Attributes
     <td>Google authenticator package</td>
     <td><tt>google-authenticator</tt></td>
   </tr>
+  <tr>
+    <td><tt>['google-authenticator']['sshd_pamd_']</tt></td>
+    <td>location of sshd pam module</td>
+    <td><tt>/etc/pam.d/sshd</tt></td>
+  </tr>
 </table>
 
 Usage
@@ -51,9 +56,10 @@ Then override the server attribute for openssh with:
 	}
 }
 ```
-Note that you will need to manual update the pam sshd module (as there is no direct equivalent of augeas in chef to modify files) by adding the following as the first line:
 
-auth required pam_google_authenticator.so
+You may also override ['google-authenticator']['sshd_pamd_'] attribute if the location is different.
+
+Note that this cookbook makes a changes on the pam file through the use of Chef::Util::FileEdit:insert_line_if_no_match(). If you are running a version of Chef client earlier than 10.16.x, this cookbook may not work.
 
 More information on setting up Google Authenticator can be found at this URL:
 

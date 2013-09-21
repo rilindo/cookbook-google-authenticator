@@ -5,9 +5,10 @@ This file is used to list changes made in each version of the google-authenticat
 
 0.1.0
 -----
-- [your_name] - Initial release of google-authenticator
+- [Rilindo Foster] - Initial release of google-authenticator
+
+0.1.4
+-----
+- [Rilindo Foster] - Added ['google-authenticator']['sshd_pamd_'] attribute, gave it ability to modify sshd module directly. 
 
 - - -
-Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
-
-The [Github Flavored Markdown page](http://github.github.com/github-flavored-markdown/) describes the differences between markdown on github and standard markdown.
