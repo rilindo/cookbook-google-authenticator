@@ -12,24 +12,8 @@ This has been tested on Fedora 19. It may work on other Linux distributions.
 
 Attributes
 ----------
-#### google-authenticator::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['google-authenticator']['package_name']</tt></td>
-    <td>Google authenticator package</td>
-    <td><tt>google-authenticator</tt></td>
-  </tr>
-  <tr>
-    <td><tt>['google-authenticator']['sshd_pamd_']</tt></td>
-    <td>location of sshd pam module</td>
-    <td><tt>/etc/pam.d/sshd</tt></td>
-  </tr>
-</table>
+* `['google-authenticator']['package_name']` - name of google package authentication package. Defaults to `google-authenticator`
+* `['google-authenticator']['sshd_pamd']` - location of sshd pam module. Defaults to `/etc/pam.d/sshd`
 
 Usage
 -----

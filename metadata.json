@@ -1,0 +1,30 @@
+{
+  "name": "google-authenticator",
+  "description": "Installs/Configures google-authenticator",
+  "long_description": "google-authenticator Cookbook\n=============================\nInstalls google-authenticator.\n\nRequirements\n------------\nThis requires the opencode-openssh, which can be found here:\n\nhttps://github.com/opscode-cookbooks/openssh\n\nThis has been tested on Fedora 19. It may work on other Linux distributions.\n\nAttributes\n----------\n#### google-authenticator::default\n<table>\n  <tr>\n    <th>Key</th>\n    <th>Description</th>\n    <th>Default</th>\n  </tr>\n  <tr>\n    <td><tt>['google-authenticator']['package_name']</tt></td>\n    <td>Google authenticator package</td>\n    <td><tt>google-authenticator</tt></td>\n  </tr>\n  <tr>\n    <td><tt>['google-authenticator']['sshd_pamd_']</tt></td>\n    <td>location of sshd pam module</td>\n    <td><tt>/etc/pam.d/sshd</tt></td>\n  </tr>\n</table>\n\nUsage\n-----\n\n\nJust include `google-authenticator` in your node's `run_list`, along with opscode's openssh:\n\n```json\n{\n  \"name\":\"my_node\",\n  \"run_list\": [\n    \"recipe[google-authenticator]\",\n    \"recipe[openssh]\"\n  ]\n}\n```\n\nThen override the server attribute for openssh with:\n\n```json\n{\n\t\"server\":{\n\t\t\"ChallengeResponseAuthentication\":\"yes\"\n\t}\n}\n```\n\nYou may also override ['google-authenticator']['sshd_pamd_'] attribute if the location is different.\n\nNote that this cookbook makes a changes on the pam file through the use of Chef::Util::FileEdit:insert_line_if_no_match(). If you are running a version of Chef client earlier than 10.16.x, this cookbook may not work.\n\nMore information on setting up Google Authenticator can be found at this URL:\n\nhttp://www.mnxsolutions.com/security/two-factor-ssh-with-google-authenticator.html\n\n\n\nContributing\n------------\nIf you want to contribute.\n\n1. Fork the repository on Github\n2. Create a named feature branch (like `add_component_x`)\n3. Write your change\n4. Submit a Pull Request using Github\n\nLicense and Authors\n-------------------\nAuthors: Rilindo Foster <rilindo.foster@monzell.com>",
+  "maintainer": "Rilindo Foster",
+  "maintainer_email": "rilindo.foster@monzell.com",
+  "license": "All rights reserved",
+  "platforms": {
+  },
+  "dependencies": {
+    "openssh": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.4"
+}
