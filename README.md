@@ -8,7 +8,9 @@ This requires the opencode-openssh, which can be found here:
 
 https://github.com/opscode-cookbooks/openssh
 
-This has been tested on Fedora 19. It may work on other Linux distributions.
+This has been tested on Fedora 19. It may work on other Linux distributions, provided that it is available in the distribution repos.
+Future update will add Google's repo if the package is not available in the default repo.
+
 
 Attributes
 ----------
@@ -63,3 +65,7 @@ If you want to contribute.
 License and Authors
 -------------------
 Authors: Rilindo Foster <rilindo.foster@monzell.com>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
