@@ -19,4 +19,8 @@ This file is used to list changes made in each version of the google-authenticat
 
 - [Rilindo Foster] - Added licensing info.
 
+0.1.7
+
+- [Rilindo Foster] - Added instructions to clone directly from github.
+
 - - -

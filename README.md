@@ -17,6 +17,16 @@ Attributes
 * `['google-authenticator']['package_name']` - name of google package authentication package. Defaults to `google-authenticator`
 * `['google-authenticator']['sshd_pamd']` - location of sshd pam module. Defaults to `/etc/pam.d/sshd`
 
+
+Installation
+------------
+
+You can download directly using the knife cookbook tool. If you want to get the latest version:
+
+1. Create a directory called `google-authenticator` in your cookbook directory
+2. cd to that directory
+3. clone from the repo with: `git git@github.com:rilindo/cookbook-google-authenticator.git .`
+
 Usage
 -----
 
