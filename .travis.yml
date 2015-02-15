@@ -3,9 +3,10 @@ rvm:
   - 2.0.0
 before_script:
   - bundle exec berks install
-  - bundle exec foodcritic install
-  - bundle exec rspec install
-  - bundle exec rubocop install
+  - gem install foodcritic
+  - gem install chefspec
+  - gem install rspec
+  - gem install rubocop
 script:
   - bundle exec foodcritic -f any .
   - bundle exec rspec --color --format progress
