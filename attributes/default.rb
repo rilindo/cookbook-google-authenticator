@@ -16,5 +16,5 @@
 ## limitations under the License.
 ##
 
-default['google-authenticator']['package_name'] = "google-authenticator"
-default['google-authenticator']['sshd_pam'] = "/etc/pam.d/sshd"
+default['google-authenticator']['package_name'] = 'google-authenticator'
+default['google-authenticator']['sshd_pam'] = '/etc/pam.d/sshd'
