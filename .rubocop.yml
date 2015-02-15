@@ -1,0 +1,7 @@
+AllCops:
+  Exclude:
+  - 'recipes/*'
+  - 'Gemfile'
+  - 'Vagrantfile'
+  - 'Thorfile'
+  - 'metadata.rb'
