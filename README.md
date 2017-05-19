@@ -15,6 +15,7 @@ Attributes
 ----------
 * `['google-authenticator']['package_name']` - name of google package authentication package. Defaults to `google-authenticator`
 * `['google-authenticator']['sshd_pamd']` - location of sshd pam module. Defaults to `/etc/pam.d/sshd`
+* `['google-authenticator']['options']` - add any GA options here. Defaults to null value. [Read more](https://github.com/google/google-authenticator-libpam#module-options)
 
 
 Installation
@@ -47,7 +48,7 @@ To update sshd to support google-authenticator, in your node's `run_list`, inclu
   "name":"my_node",
   "run_list": [
     "recipe[google-authenticator]",
-    "recipe[google-authenticator::sshd]":,
+    "recipe[google-authenticator::sshd]",
     "recipe[openssh]"
   ]
 }
