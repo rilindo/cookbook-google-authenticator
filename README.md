@@ -15,7 +15,7 @@ Attributes
 ----------
 * `['google-authenticator']['package_name']` - name of google package authentication package. Defaults to `google-authenticator`
 * `['google-authenticator']['sshd_pamd']` - location of sshd pam module. Defaults to `/etc/pam.d/sshd`
-* `['google-authenticator']['nullok']` - allow the `nullok` value? Defaults to null value. [Read more](https://github.com/google/google-authenticator-libpam#nullok)
+* `['google-authenticator']['options']` - add any GA options here. Defaults to null value. [Read more](https://github.com/google/google-authenticator-libpam#module-options)
 
 
 Installation

@@ -22,7 +22,7 @@ ruby_block "edit-sshd-pamd" do
   block do
     file = Chef::Util::FileEdit.new(node['google-authenticator']['sshd_pam'])
 
-    auth = "auth required pam_google_authenticator.so %s" % node['google-authenticator']['nullok']
+    auth = "auth required pam_google_authenticator.so %s" % node['google-authenticator']['options']
 
     file.insert_line_if_no_match(
       auth,
